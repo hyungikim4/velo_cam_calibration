@@ -102,9 +102,13 @@ void RvizClickedPointCallback(const geometry_msgs::PointStamped& in_clicked_poin
 	                                               in_clicked_point.point.y,
 	                                               in_clicked_point.point.z));
 	
+	printf("<VU x=\"%f\" y=\"%f\" z=\"%f\" />\n", in_clicked_point.point.x, in_clicked_point.point.y, in_clicked_point.point.z);
+	/*
 	std::cout << cv::Point3f(in_clicked_point.point.x,
 	                         in_clicked_point.point.y,
-	                         in_clicked_point.point.z) << std::endl;
+	                         in_clicked_point.point.z) << std::endl << std::endl;
+	*/
+
   
   vertex_cloud.header.frame_id = in_clicked_point.header.frame_id;
   // PPoint tmp;
