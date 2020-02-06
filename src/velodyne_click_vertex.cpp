@@ -114,8 +114,7 @@ void RvizClickedPointCallback(const geometry_msgs::PointStamped& in_clicked_poin
   // PPoint tmp;
   // tmp.x = in_clicked_point.point.x, tmp.y = in_clicked_point.point.y, tmp.z = in_clicked_point.point.z;
   // vertex_cloud.push_back(tmp);
-	std::cout << "Number of points: " << clicked_velodyne_points_.size() << std::endl  << std::endl;
-  
+	
   filter_xmin = MIN(in_clicked_point.point.x, filter_xmin);
   filter_xmax = MAX(in_clicked_point.point.x, filter_xmax);
   filter_ymin = MIN(in_clicked_point.point.y, filter_ymin);

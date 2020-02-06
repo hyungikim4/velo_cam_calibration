@@ -100,7 +100,6 @@ void Velodyne::RvizClickedPointCallback(const geometry_msgs::PointStamped& in_cl
 	                         in_clicked_point.point.y,
 	                         in_clicked_point.point.z) << std::endl << std::endl;
 	*/
-	std::cout << "Number of points: " << clicked_velodyne_points_.size() << std::endl;
 
 	filter_xmin = MIN(in_clicked_point.point.x, filter_xmin);
   filter_xmax = MAX(in_clicked_point.point.x, filter_xmax);
