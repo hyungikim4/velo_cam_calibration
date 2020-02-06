@@ -35,8 +35,8 @@ float filter_ymax = -100000.;
 float filter_zmin = 100000.;
 float filter_zmax = -100000.;
 
-float left_line_real_length = 0.905;
-float right_line_real_length = 0.905;
+float left_line_real_length = 0.3; // 0.905
+float right_line_real_length = 0.3;
 float error_thresh = 0.07;
 
 void writeData()

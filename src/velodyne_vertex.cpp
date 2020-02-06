@@ -94,10 +94,12 @@ void Velodyne::RvizClickedPointCallback(const geometry_msgs::PointStamped& in_cl
 	clicked_velodyne_points_.push_back(cv::Point3f(in_clicked_point.point.x,
 	                                               in_clicked_point.point.y,
 	                                               in_clicked_point.point.z));
-	
+	printf("<VU x=\"%f\" y=\"%f\" z=\"%f\" />\n", in_clicked_point.point.x, in_clicked_point.point.y, in_clicked_point.point.z);
+	/*
 	std::cout << cv::Point3f(in_clicked_point.point.x,
 	                         in_clicked_point.point.y,
 	                         in_clicked_point.point.z) << std::endl << std::endl;
+	*/
 	std::cout << "Number of points: " << clicked_velodyne_points_.size() << std::endl;
 
 	filter_xmin = MIN(in_clicked_point.point.x, filter_xmin);
