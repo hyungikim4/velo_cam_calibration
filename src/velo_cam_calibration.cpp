@@ -215,7 +215,12 @@ int main(int argc, char** argv)
         float Zl_L = lidar_pts[i].z;
         int xp = ((trans_matrix[0]*Xl_L + trans_matrix[1]*Yl_L + trans_matrix[2]*Zl_L + trans_matrix[3])/(trans_matrix[8]*Xl_L + trans_matrix[9]*Yl_L + trans_matrix[10]*Zl_L + trans_matrix[11]));
         int yp = ((trans_matrix[4]*Xl_L + trans_matrix[5]*Yl_L + trans_matrix[6]*Zl_L + trans_matrix[7])/(trans_matrix[8]*Xl_L + trans_matrix[9]*Yl_L + trans_matrix[10]*Zl_L + trans_matrix[11]));
-        printf("(xp,yp) = (%d, %d)\n", xp,yp);
+        if (i%4==0)
+        {
+            int ith_file = i/4;
+            std::cout << velo_filenames[ith_file] << " " << cam_filenames[ith_file] << std::endl;
+        }
+        printf("(Estimated/ Original): (xp,yp) = (%d, %d) / (%d, %d)\n", xp,yp, cam_pts[i].x, cam_pts[i].y);
     }
     return 0;
 }

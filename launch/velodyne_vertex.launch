@@ -14,11 +14,12 @@
   <arg name="error_thresh" default="0.07"/>
   
   <!-- m -->
-  <arg name="left_line_real_length" default="0.3"/> <!--0.905 m  0.81 m-->
-  <arg name="right_line_real_length" default="0.3"/>
+  <arg name="left_line_real_length" default="0.81"/> <!--0.905 m  0.81 m 0.3 m-->
+  <arg name="right_line_real_length" default="0.81"/>
   
 
   <node pkg="velo_cam_calibration" type="velodyne_vertex_node" name="velodyne_vertex_node" output="screen">
+    <remap from="/velodyne_points" to="/transformed_pointcloud"/>
     <param name="scan_line" value="$(arg scan_line)"/>
     <param name="click_filter_pts" value="$(arg click_filter_pts)"/>
 

@@ -35,8 +35,8 @@ float filter_ymax = -100000.;
 float filter_zmin = 100000.;
 float filter_zmax = -100000.;
 
-float left_line_real_length = 0.3; // 0.905
-float right_line_real_length = 0.3;
+float left_line_real_length = 0.81; // 0.905
+float right_line_real_length = 0.81;
 float error_thresh = 0.07;
 
 void writeData()
@@ -138,7 +138,8 @@ void RvizClickedPointCallback(const geometry_msgs::PointStamped& in_clicked_poin
     error[3] = fabs(right_line_real_length - pcl::euclideanDistance(vertex_cloud.points[3], vertex_cloud.points[0]))/right_line_real_length;
 
     ROS_INFO("error = (%f, %f, %f, %f)", error[0], error[1], error[2], error[3]);
-    if (error[0] <= error_thresh && error[1] <= error_thresh && error[2] <= error_thresh && error[3] <= error_thresh)
+    // if (error[0] <= error_thresh && error[1] <= error_thresh && error[2] <= error_thresh && error[3] <= error_thresh)
+    if (1)
     {
 		  writeData();
     }
