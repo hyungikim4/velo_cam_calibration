@@ -69,3 +69,6 @@ At this time, the number of `camera_xx.xml` and the number of `vertices_xx.xml` 
 `rosrun velo_cam_calibration velo_cam_calibration`
 
 The calibration matrix is obtained using all `camera_xx.xml` and `vertices_xx.xml`, and `calibration_matrix.xml` and `calibration_matrix_date.xml` are created.
+
+## References
+[1] Park, Y., Yun, S., Won, C. S., Cho, K., Um, K., & Sim, S. (2014). Calibration between color camera and 3D LIDAR instruments with a polygonal planar board. Sensors, 14(3), 5333-5353.
